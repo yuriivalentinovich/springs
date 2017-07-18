@@ -65,16 +65,16 @@
         if ($(this).hasClass('phone-call-active')) {
             $('#page-wrap').removeClass('page-fade');
             $('#phone-call').removeClass('phone-call-active');
-            $('#one').delay(200).transition({ scale: 0 });
-            $('#two').delay(100).transition({ scale: 0 });
+            $('#one').delay(200).css({'display':'none',     'transform': 'scale(0)' });
+            $('#two').delay(100).css({'display':'none',     'transform': 'scale(0)' });
             // $('#three').transition({ scale: 0 });
         }
 
         else {
             $('#page-wrap').addClass('page-fade');
             $('#phone-call').addClass('phone-call-active');
-            $('#one').transition({ scale: 1.1 });
-            $('#two').delay(100).transition({ scale: 1.1 });
+            $('#one').css({   'transform': 'scale(1.1)' });
+            $('#two').delay(100).css({   'transform': 'scale(1.1)' });
             // $('#three').delay(200).transition({ scale: 1.1 });
         }
     })
@@ -82,8 +82,8 @@
         if ($('#page-wrap').hasClass('page-fade')) {
             $('#page-wrap').removeClass('page-fade');
             $('#phone-call').removeClass('phone-call-active');
-            $('#one').delay(200).transition({ scale: 0 });
-            $('#two').delay(100).transition({ scale: 0 });
+            $('#one').delay(200).css({'display':'none',     'transform': 'scale(0)' });
+            $('#two').delay(100).css({'display':'none',     'transform': 'scale(0)' });
             // $('#three').transition({ scale: 0 });
         }
     })
